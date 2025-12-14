@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+export DEB_CFLAGS_MAINT_APPEND = -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types
 # -*- makefile -*-
 
 # Uncomment this to turn on verbose mode.

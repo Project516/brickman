@@ -25,15 +25,17 @@ RUN apt-get update && apt-get install -y \
     libudev-dev:armel \
     libdbus-1-dev:armel \
     libasound2-dev:armel \
+    libgudev-1.0-dev:armel \
     libpng-dev:armel \
     libjpeg-dev:armel \
+    libfreetype-dev:armel \
+    libfontconfig-dev:armel \
     fonts-lato \
+    libpcre2-dev:armel \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. Install YOUR custom GRX library
-# This copies the file from your Codespace into the image
-COPY libgrx-3.0-2_3.1.1_armel.deb /tmp/
-RUN apt-get update && apt-get install -y /tmp/libgrx-3.0-2_3.1.1_armel.deb
+COPY *.deb /tmp/
+RUN dpkg -i --force-all /tmp/*.deb
 
 # 4. Create builder user
 RUN useradd -m compiler && echo "compiler ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers

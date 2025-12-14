@@ -168,7 +168,7 @@ link_libraries(m)
 if (CMAKE_CROSSCOMPILING)
     # These need to be added manually for some reason. It is important that they
     # come after other calls to link_libraries or you will get linker errors.
-    link_libraries(pcre resolv pthread)
+    link_libraries(pcre2-8 resolv pthread)
 endif(CMAKE_CROSSCOMPILING)
 
 find_package(Vala REQUIRED)
@@ -199,7 +199,7 @@ PACKAGES
     linux
     ${BRICKMAN_TEST_PACKAGES}
 CUSTOM_VAPIS
-    bindings/*.vapi
+    bindings/GLib.vapi bindings/Posix.vapi
 OPTIONS
     --target-glib=2.40
     --thread
