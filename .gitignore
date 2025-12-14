@@ -3,3 +3,6 @@ build*/
 *~
 *.sublime-workspace
 .~lock*
+
+#
+obj-arm-linux-*/*

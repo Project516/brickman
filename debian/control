@@ -2,7 +2,7 @@ Source: brickman
 Section: embedded
 Priority: standard
 Maintainer: David Lechner <david@lechnology.com>
-Build-Depends: debhelper (>= 12), cmake, valac (>= 0.24),
+Build-Depends: debhelper (>= 13), cmake, valac (>= 0.24),
                libgirepository1.0-dev, libgudev-1.0-dev,
                libev3devkit-dev (>= 0.6.0), netpbm
 Standards-Version: 4.5.0

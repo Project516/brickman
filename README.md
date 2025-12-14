@@ -15,7 +15,7 @@ Get the code:
 
 * Clone of the brickman repo.
 
-        git clone git://github.com/ev3dev/brickman
+        git clone https://github.com/ev3dev/brickman
         cd brickman
         git submodule update --init --recursive
 
